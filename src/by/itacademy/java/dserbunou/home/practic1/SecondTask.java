@@ -26,7 +26,7 @@ public class SecondTask {
         System.out.printf("entered array %s:\n", Arrays.toString(array));
 
         int numberShort = 0;
-        int numberLong = 0;
+   //     int numberLong = 0;
 
         for (int element : array) {
             final String Str = element + "";
