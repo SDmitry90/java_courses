@@ -16,5 +16,6 @@ public class Test {
 		Car similarCar = new Car(2010);
 		System.out.println(car == similarCar);
 	}
+    public char[] nonStaticField;
 
 }
