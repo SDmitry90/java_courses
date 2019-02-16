@@ -26,11 +26,39 @@ public class SecondTask {
 		}
 		System.out.printf("Массив с введенными значениями %s \n", Arrays.toString(array));
 
-		// обратный вывод значений на экран - для своего понимания
-		/*
-		 * for (int i = 0; i < array.length; i++) { int x = array[i];
-		 * System.out.printf("%s \n", x); }
-		 */
+		averageValue(arraySize, array);
+
+		// double averageValue = 0;
+		// int[] maxLenght = new int[size];
+
+	/*	int sizeArray = 0;
+		for (int d : array) {
+			String noname = d + "";
+			int length = noname.length();
+			if (length < (averageValue(arraySize, array))) {
+				sizeArray++;
+				int[] minLenght = new int[sizeArray];
+				for (int i = 0; i < array.length; i++) {
+					minLenght[i] = d;
+				}
+
+			}
+		}*/
+		maxMinValue(array);
+	}
+
+	private static void averageValue(final int arraySize, final int[] array) {
+		int size = 0;
+		for (int d : array) {
+			String noname = d + "";
+			int length = noname.length();
+			size += length;
+			double averageValue = (double) size / arraySize;
+			System.out.printf("Средняя длина %s \n", averageValue);
+		}
+	}
+
+	private static void maxMinValue(final int[] array) {
 		int maxL = 0;
 		int minL = 0;
 		int maxNumber = 0;
@@ -39,7 +67,6 @@ public class SecondTask {
 		for (int d : array) {
 			String noname = d + "";
 			int length = noname.length();
-			System.out.printf("%s \n", length);
 
 			if (length > maxL) {
 				maxL = length;
