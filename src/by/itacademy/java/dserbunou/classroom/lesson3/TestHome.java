@@ -4,17 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
 // 1. ѕриветствовать любого пользовател€ при вводе его имени через командную строку.
-
 
 public class TestHome {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		String line = bufferedReader.readLine(); // input from console
-		
+
 		printMessage(line);
 	}
 
@@ -23,8 +21,3 @@ public class TestHome {
 		System.out.println(x);
 	}
 }
-
-
-// rename - ALT+SHIFT+R
-//extract variable/method - ALT+SHIFT+T
-

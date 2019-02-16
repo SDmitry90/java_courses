@@ -1,2 +1,16 @@
 CTRL+SHIFT+T=open type - поиск нужного класса
 CTRL+O=open methods - нажать в классе, чтобы увидеть какие он имеет методы
+
+Debug - жук
+F6 - вперед на шаг
+F8 - до следующего breakpoint 
+
+CTRL+SHIFT+I - выделить метод и узнать результат его выполения, тоже самое и с условиями (пример (i<5))
+CTRL - навести на класс или переменную и можно увидеть, где объявляется
+
+ALT+SHIFT+R - Rename переменные, классы и тд
+ALT+SHIFT+T - extract variable/method 
+
+heap-> include object
+stack-> include methods+local variable, preference
+metaspace-> include classes, static data

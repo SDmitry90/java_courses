@@ -5,14 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
 
-
 //2. Вывести заданное количество случайных чисел с переходом и без перехода на новую строку.
 
 public class TestHome2 {
 
 	public static void main(String[] args) throws IOException {
-		// rename - ALT+SHIFT+R
-		// extract variable/method - ALT+SHIFT+T
 
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -30,6 +27,3 @@ public class TestHome2 {
 		}
 	}
 }
-
-// rename - ALT+SHIFT+R
-// extract variable/method - ALT+SHIFT+T
