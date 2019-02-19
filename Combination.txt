@@ -14,3 +14,4 @@ ALT+SHIFT+T - extract variable/method
 heap-> include object
 stack-> include methods+local variable, preference
 metaspace-> include classes, static data
+почитать про регулярки на викибукс.орг
