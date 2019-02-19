@@ -13,23 +13,6 @@ import java.util.regex.Pattern;
 
 public class Test {
 
-    private static String readFromUrl(final String url) throws MalformedURLException, IOException, ProtocolException {
-        final URL obj = new URL(url);
-        final HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
-
-        connection.setRequestMethod("GET");
-        String htmlString = null;
-        try (final BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));) {
-            String inputLine;
-            final StringBuffer response = new StringBuffer();
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-                htmlString = response.toString();
-            }
-        }
-        return htmlString;
-    }
-
     public static void main(String[] args) throws MalformedURLException, ProtocolException, IOException {
         /*
          * String str = "я изучаю Java "; StringBuilder strBuilder = new
@@ -73,15 +56,6 @@ public class Test {
          * 
          * }
          */
-
-        String text = readFromUrl("https://www.tut.by");
-        int counter = 0;
-        Pattern pattern = Pattern.compile("<div[^>]*>");
-        Matcher matcher = pattern.matcher(text);
-        while (matcher.find()) {
-            counter++;
-        }
-        System.out.printf("Found %d <div> open tags", counter);
 
     }
 
