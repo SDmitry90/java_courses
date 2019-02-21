@@ -44,7 +44,21 @@ public class SecondTask {
 		 * 
 		 * isPalindrome(array);
 		 */
+		int x, y, z;
+		for (int d : array) {
 
+			do {
+				x = d % 10;
+				y = d / 10;
+				z = y % 10;
+				if (x > z) {
+					y = y / 10;
+					x = y % 10;
+					if (z > x) {
+					}
+				}
+			} while (x == 0);
+		}
 	}
 
 	private static void isPalindrome(final int[] array) {
