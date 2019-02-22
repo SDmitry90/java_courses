@@ -10,6 +10,7 @@ CTRL - навести на класс или переменную и можно 
 
 ALT+SHIFT+R - Rename переменные, классы и тд
 ALT+SHIFT+T - extract variable/method 
+ALT+SHIFT+S - автоматический конструктор
 
 heap-> include object
 stack-> include methods+local variable, preference
@@ -21,3 +22,11 @@ metaspace-> include classes, static data
 над любым самым высшим классом есть класс Object, от которого наследуются такие методы как ToString, equals и тд.
 у каждого класса 1 наследник
 Полиморфизм -
+
+
+finalaize - метод, который мы не вызываем, но его вызывает гарбич коллектор, чтобы удалить мусор
+
+this - указывает на переменную, если они одинаковые
+super -  указатель на самый высший класс
+
+В intarface могут быть только константы и абстрактные методы
