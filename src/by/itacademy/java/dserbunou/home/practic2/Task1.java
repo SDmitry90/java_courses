@@ -11,7 +11,7 @@ public class Task1 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
 		final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("������� ������ ������ ����������� �������:");
+		System.out.println("Введите размер сторны квадратного массива:"); //Введите размер сторны квадратного массива:
 		final int arraySize = Integer.parseInt(bufferedReader.readLine());
 		final int[][] array = new int[arraySize][arraySize];
 
