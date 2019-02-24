@@ -13,37 +13,36 @@ public class SecondTask {
 
 		final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-		System.out.println("Введите размер массива:");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:");
 
 		final int arraySize = Integer.parseInt(bufferedReader.readLine());
 		final int[] array = new int[arraySize];
 
-		System.out.printf("Получили такой массив: %s \n", Arrays.toString(array));
+		System.out.printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: %s \n", Arrays.toString(array));
 
-		// запись значений в массив
+		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 		for (int i = 0; i < arraySize; i++) {
-			System.out.printf("Введите %s элемент массива:\n", i);
+			System.out.printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ %s пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:\n", i);
 			final int element = Integer.parseInt(bufferedReader.readLine());
 			array[i] = element;
 		}
-		System.out.printf("Массив с введенными значениями %s \n", Arrays.toString(array));
+		System.out.printf("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ %s \n", Arrays.toString(array));
 
-		/*
-		 * maxMinValue(array);
-		 * 
-		 * averageValue(arraySize, array); double averageValue = averageValue(arraySize,
-		 * array); System.out.printf("Средняя длина %s \n", averageValue);
-		 * 
-		 * minAverageMaxAverage(array, averageValue);
-		 * 
-		 * evenNumbers(array);
-		 * 
-		 * dividedByThreeFive(array);
-		 * 
-		 * primeNumber(array);
-		 * 
-		 * isPalindrome(array);
-		 */
+		 maxMinValue(array);
+		
+		/* averageValue(arraySize, array); double averageValue = averageValue(arraySize,
+		  array); System.out.printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ %s \n", averageValue);
+		  
+		  minAverageMaxAverage(array, averageValue);
+		  
+		  evenNumbers(array);
+		  
+		  dividedByThreeFive(array);
+		  
+		  primeNumber(array);
+		  
+		  isPalindrome(array);
+		 
 		int x, y, z;
 		for (int d : array) {
 
@@ -58,7 +57,7 @@ public class SecondTask {
 					}
 				}
 			} while (x == 0);
-		}
+		}*/
 	}
 
 	private static void isPalindrome(final int[] array) {
@@ -66,7 +65,7 @@ public class SecondTask {
 			String noname = d + "";
 			String reverse = new StringBuffer(noname).reverse().toString();
 			if (noname.equals(reverse)) {
-				System.out.printf("Полиндром: %s \n", d);
+				System.out.printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: %s \n", d);
 			}
 		}
 	}
@@ -75,7 +74,7 @@ public class SecondTask {
 		int i = 1;
 		for (int d : array) {
 			if ((d == 2 || d == 3 || d == 5 || d == 7) || (d % 2 != 0 && d % 3 != 0 && d % 5 != 0 && d % 7 != 0)) {
-				System.out.printf("%s простое число: %s \n", i, d);
+				System.out.printf("%s пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: %s \n", i, d);
 				i++;
 			}
 		}
@@ -85,7 +84,7 @@ public class SecondTask {
 		int i = 1;
 		for (int d : array) {
 			if (d % 3 == 0 && d % 5 == 0) {
-				System.out.printf("%s число, которое делится на 3 и на 5: %s \n", i, d);
+				System.out.printf("%s пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 3 пїЅ пїЅпїЅ 5: %s \n", i, d);
 				i++;
 			}
 		}
@@ -95,42 +94,25 @@ public class SecondTask {
 		int i = 1;
 		for (int d : array) {
 			if (d % 2 == 0) {
-				System.out.printf("%s четное число %s \n", i, d);
+				System.out.printf("%s пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ %s \n", i, d);
 				i++;
 			}
 		}
-		System.out.println("Больше четных чисел нет");
+		System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ");
 	}
-	/*
-	 * System.out.printf("Числа с длинной меньше средней %s, \nбольше средней - %s",
-	 * Arrays.toString(minLenght), Arrays.toString(maxLenght));
-	 */
 
 	private static void minAverageMaxAverage(final int[] array, double averageValue) {
-		// int sizeArrayMin = 1;
-		// int sizeArrayMax = 1;
-		// int[] minLenght = new int[sizeArrayMin];
-		// int[] maxLenght = new int[sizeArrayMax];
 		int i = 1, j = 1;
 		for (int d : array) {
 			String noname = d + "";
 			int length = noname.length();
 			if (length <= averageValue) {
-				System.out.printf("%s число с длиной меньше средней %s \n", i, d);
+				System.out.printf("%s пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ %s \n", i, d);
 				i++;
 			} else {
-				System.out.printf("%s число с длиной больше средней %s \n", j, d);
+				System.out.printf("%s пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ %s \n", j, d);
 				j++;
 			}
-
-			/*
-			 * for (int i = 0; i < sizeArrayMin; i++) { minLenght[i] = d; sizeArrayMin++; }
-			 * minLenght[i] = d; sizeArrayMin++; i++; // sizeArrayMin++; // int[] minLenght
-			 * = new int[sizeArrayMin]; for (int i = 0; i < array.length; i++) {
-			 * minLenght[i] = d; sizeArrayMin++; } }else { maxLenght[j] = d; sizeArrayMax++;
-			 * j++; } else { //sizeArrayMax++; // int[] maxLenght = new int[sizeArrayMax];
-			 * for (int i = 0; i < array.length; i++) { maxLenght[i] = d; sizeArrayMax++; }
-			 */
 		}
 	}
 
@@ -165,7 +147,7 @@ public class SecondTask {
 				minNumber = d;
 			}
 		}
-		System.out.printf("Максимальное число %s с длиной %s \nМинимальное число %s с длинной %s \n", maxNumber, maxL,
+		System.out.printf("Max value %s пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ %s \nпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ %s пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ %s \n", maxNumber, maxL,
 				minNumber, minL);
 	}
 }

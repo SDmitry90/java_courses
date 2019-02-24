@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.classroom.lesson5;
+	package by.itacademy.java.dserbunou.classroom.lesson5;
 
 import java.io.BufferedReader;
 import java.io.IOException;

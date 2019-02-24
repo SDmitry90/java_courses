@@ -15,7 +15,6 @@ ALT+SHIFT+S - автоматический конструктор
 heap-> include object
 stack-> include methods+local variable, preference
 metaspace-> include classes, static data
-почитать про регулярки на викибукс.орг
 
 Инкапсуляция - возможность разделить код на модули (классы), и скрыть определенные свойства
 Наследование

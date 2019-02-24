@@ -13,50 +13,50 @@ import java.util.regex.Pattern;
 
 public class Test {
 
-    public static void main(String[] args) throws MalformedURLException, ProtocolException, IOException {
-        /*
-         * String str = "я изучаю Java "; StringBuilder strBuilder = new
-         * StringBuilder(str); strBuilder.append("и английский тоже нужен");
-         * System.out.println(strBuilder.toString());
-         */
-        // System.out.println("20934".matches("-?[0-9]+"));
+	public static void main(String[] args) throws MalformedURLException, ProtocolException, IOException {
 
-        /*
-         * String str = "Test      string for split"; String[] words = str.split(" +");
-         * //разбить строку по пробелу от одного и больше, если без плюса, то по каждому
-         * пробелу for (String word : words) { System.out.println(word + ""); }
-         */
+		String str = "РР·СѓС‡РµРЅРёРµ JAVA ";
+		StringBuilder strBuilder = new StringBuilder(str);
+		strBuilder.append("СЃРѕРІСЃРµРј РЅРµ Р»РµРіРєР°СЏ С€С‚СѓРєР°");
+		System.out.println(strBuilder.toString());
 
-        /*
-         * String str = "Test    multiple    spaces";
-         * System.out.println(str.replaceAll(" +", " ")); //в местах, там, где один или
-         * более пробела, заменить на один пробел
-         */
+		System.out.println("20934".matches("-?[0-9]+"));
 
-        /*
-         * final BufferedReader bufferedReader = new BufferedReader(new
-         * InputStreamReader(System.in)); String str="";
-         * 
-         * System.out.printf("Введите строку:\n", str); String str =
-         * Integer.parse(bufferedReader.readLine());
-         */
+		String str1 = "Test      string for split";
+		String[] words = str1.split(" +");
+		for (String word : words) {
+			System.out.println(word + "");
+		}
 
-        /*
-         * try (Scanner sc = new Scanner(System.in)) { String line = sc.nextLine();
-         * String result = "String contains various characters"; String numRegex =
-         * "\\d+"; String wordRegex = "(?i)[a-z]+"; if (line.matches(numRegex)) { result
-         * = "String contains only numbers"; } else if (line.matches(wordRegex)) {
-         * result = "String contains only letters"; } System.out.println(result); }
-         */
+		String str2 = "Test    multiple    spaces";
+		System.out.println(str2.replaceAll(" +", " ")); 
 
-        /*
-         * Pattern p = Pattern.compile(" +- +"); Matcher matcher =
-         * p.matcher("Test - string - test"); while (matcher.find()) {
-         * System.out.println(matcher.start() + " " + matcher.end());
-         * 
-         * }
-         */
+		final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		String str3 = "";
+		System.out.printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:\n", str3);
 
-    }
+		// String str4 = Integer.parse(bufferedReader.readLine());
+
+		try (Scanner sc = new Scanner(System.in)) {
+			String line = sc.nextLine();
+			String result = "String contains various characters";
+			String numRegex = "\\d+";
+			String wordRegex = "(?i)[a-z]+";
+			if (line.matches(numRegex)) {
+				result = "String contains only numbers";
+			} else if (line.matches(wordRegex)) {
+				result = "String contains only letters";
+			}
+			System.out.println(result);
+		}
+
+		Pattern p = Pattern.compile(" +- +");
+		Matcher matcher = p.matcher("Test - string - test");
+		while (matcher.find()) {
+			System.out.println(matcher.start() + " " + matcher.end());
+
+		}
+
+	}
 
 }
