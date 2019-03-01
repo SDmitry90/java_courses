@@ -10,7 +10,7 @@ CTRL - навести на класс или переменную и можно 
 
 ALT+SHIFT+R - Rename переменные, классы и тд
 ALT+SHIFT+T - extract variable/method 
-ALT+SHIFT+S - автоматический конструктор
+ALT+SHIFT+S - автоматический конструктор Геттеры / Сеттеры
 
 heap-> include object
 stack-> include methods+local variable, preference
@@ -31,3 +31,23 @@ super -  указатель на самый высший класс
 В intarface могут быть только константы и абстрактные методы
 
 ЧИТАТЬ ПРО АНОНИМНЫЕ КЛАССЫ
+
+Аннотации и Generics
+часто встречаемые 
+@Deprecated
+@Override
+@SupressWarnings например не используемая переменная
+
+аннотация 
+@Retention
+RetentionPilicy.SOURCE - аннотация которая используется на этапе компиляции, потом дел
+RetentionPilicy.RUNTIME - доступна во время выполнения
+RetentionPilicy.CLASS - записываются в класс, но потом не используются
+
+Wildcards (?) - collection <?> - в коллекции можно пихать все что угодно благодаря знаку вопрос
+Wildcards (bounded, extends)
+List<? extends Shape> - принимает всех наследников и сам Shape
+
+
+
+
