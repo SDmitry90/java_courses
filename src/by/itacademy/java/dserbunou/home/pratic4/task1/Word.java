@@ -1,18 +1,14 @@
 package by.itacademy.java.dserbunou.home.pratic4.task1;
 
 public class Word {
-	private String letters;
+	private String value;
 
-	public Word(String letters) {
-		this.letters = letters;
+	public Word(String value) {
+		this.value = value;
 	}
 
-	public String getLetters() {
-		return letters;
-	}
-
-	public void setLetters(String letters) {
-		this.letters = letters;
+	public String getValue() {
+		return value;
 	}
 
 }

@@ -2,11 +2,30 @@ package by.itacademy.java.dserbunou.home.pratic4.task1;
 
 public class Text {
 
-	Word wd = new Word();
-	Sentence st = new Sentence();
-	
-	public void textHeader() {
-		
+	private String textHeader;
+	private String body ="";
+
+	public Text(Word word) {
+		textHeader = word.getValue();
 	}
 
+	public Text(Sentence sentence) {
+		textHeader = sentence.getWords();
+	}
+
+	public String getTextHeader() {
+		return textHeader;
+	}
+
+	public void addText(Word word) {
+		body += " " + word.getValue();
+	}
+
+	public void addText(Sentence sentence) {
+		body += " " + sentence.getWords();
+	}
+
+	public String getBody() {
+		return body;
+	}
 }

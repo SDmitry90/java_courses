@@ -2,8 +2,22 @@ package by.itacademy.java.dserbunou.home.pratic4.task2;
 
 public class Wheel {
 
-	private int diameter = 14;
-	private String tireType = "winter";
+	private final int DIAMETER = 14;
+	private final String TIRETYPE = "summer";
+	private int diameter;
+	private String tireType;
+
+	public Wheel() {
+		super();
+		this.diameter = DIAMETER;
+		this.tireType = TIRETYPE;
+	}
+
+	public Wheel(int diameter, String tireType) {
+		super();
+		this.diameter = diameter;
+		this.tireType = tireType;
+	}
 
 	public int getDiameter() {
 		return diameter;
