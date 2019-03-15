@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.home.practic1;
+package by.itacademy.java.dserbunou.home.practice1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,47 +13,47 @@ public class FirstTask {
         do {
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Введите число от 1 до 12");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ 1 пїЅпїЅ 12");
             number = Integer.parseInt(bufferedReader.readLine());
 
         } while (1 > number || number > 12);
 
         switch (number) {
         case 1:
-            System.out.println("Январь");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ");
             break;
         case 2:
-            System.out.println("Февраль");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             break;
         case 3:
-            System.out.println("Март");
+            System.out.println("пїЅпїЅпїЅпїЅ");
             break;
         case 4:
-            System.out.println("Апрель");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ");
             break;
         case 5:
-            System.out.println("Май");
+            System.out.println("пїЅпїЅпїЅ");
             break;
         case 6:
-            System.out.println("Июнь");
+            System.out.println("пїЅпїЅпїЅпїЅ");
             break;
         case 7:
-            System.out.println("Июль");
+            System.out.println("пїЅпїЅпїЅпїЅ");
             break;
         case 8:
-            System.out.println("Август");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ");
             break;
         case 9:
-            System.out.println("Сентябрь");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             break;
         case 10:
-            System.out.println("Октябрь");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             break;
         case 11:
-            System.out.println("Ноябрь");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ");
             break;
         case 12:
-            System.out.println("Декабрь");
+            System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             break;
         }
 

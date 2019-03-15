@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.home.practic1;
+package by.itacademy.java.dserbunou.home.practice1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
