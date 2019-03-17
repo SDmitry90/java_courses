@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.home.pratice4.task2;
+package by.itacademy.java.dserbunou.home.practice4.task2;
 
 public class Car {
 

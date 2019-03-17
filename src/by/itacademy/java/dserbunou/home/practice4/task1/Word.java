@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.home.pratice4.task1;
+package by.itacademy.java.dserbunou.home.practice4.task1;
 
 public class Word {
 	private String value;
