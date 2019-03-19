@@ -13,13 +13,13 @@ public class Task4 {
 
 		String[] str = text.split(" +");
 
-		maxLenght(str);
+		printMaxLenght(str);
 
-		minLenght(str);
+		printMinLenght(str);
 
 	}
 
-	private static void minLenght(String[] str) {
+	private static void printMinLenght(String[] str) {
 		int minLength = str[0].length();
 
 		for (String word : str) {
@@ -35,7 +35,7 @@ public class Task4 {
 		}
 	}
 
-	private static void maxLenght(String[] str) {
+	private static void printMaxLenght(String[] str) {
 		int maxLength = str[0].length();
 
 		for (String word : str) {

@@ -2,16 +2,16 @@ package by.itacademy.java.dserbunou.home.practice4.task2;
 
 public class Engine {
 
-	private final double ENGINECAPACITY = 1.6;
-	private final int NUMBEROFCYLINDERS = 4;
+//	private final double ENGINECAPACITY = 1.6;
+//	private final int NUMBEROFCYLINDERS = 4;
 	private double engineCapacity;
 	private int numberOfCylinders;
 
-	public Engine() {
+	/*public Engine() {
 		super();
 		this.engineCapacity = ENGINECAPACITY;
 		this.numberOfCylinders = NUMBEROFCYLINDERS;
-	}
+	}*/
 
 	public Engine(double engineCapacity, int numberOfCylinders) {
 		super();

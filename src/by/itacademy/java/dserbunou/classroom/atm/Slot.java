@@ -1,7 +1,5 @@
 package by.itacademy.java.dserbunou.classroom.atm;
 
-import java.util.List;
-
 public class Slot implements Comparable<Slot> {
     private final int nominal;
     private int quantity;
@@ -32,12 +30,12 @@ public class Slot implements Comparable<Slot> {
 
     }
 
-    public String printAtmStatus() {
+   /* public String printAtmStatus() {
 
         final List<Slot> slots = getSlots();
         System.out.println("ATM");
 
-    }
+    }*/
 
     @Override
     public String toString() {

@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.home.practice5.Task2;
+package by.itacademy.java.dserbunou.home.practice5.Task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,11 +7,10 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Test {
-
 	private static String readFromUrl(final String url) throws MalformedURLException, IOException, ProtocolException {
 		final URL obj = new URL(url);
 		final HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
@@ -33,16 +32,20 @@ public class Test {
 		String text = readFromUrl("https://www.sample-videos.com/text/Sample-text-file-10kb.txt");
 		text = text.replaceAll("[,.]", "");
 		// System.out.println(text);
-		Set<String> str = new HashSet<>();
+		Map<String, Integer> strMap = new HashMap<>();
 
-		putInSet(text.split(" "), str);
-		System.out.println(str.toString());
+		putInMap(text.split(" "), strMap);
+		System.out.println(strMap.toString());
 
 	}
 
-	public static void putInSet(String[] arr, Set<String> set) {
+	public static void putInMap(String[] arr, Map<String, Integer> map) {
 		for (String word : arr) {
-			set.add(word);
+			if (!map.containsKey(word)) {
+				map.put(word, 1);
+			} else {
+				map.put(word, map.get(word) + 1);
+			}
 		}
 	}
 }

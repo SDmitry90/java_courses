@@ -6,8 +6,7 @@ public class Car {
 	public String carBody;
 
 	public void printCarOptions() {
-		System.out.println("У нас есть машина " + year+" года выпуска, " + color + " цвета с кузом " + carBody);
+		System.out.println("пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ " + year + " пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, " + color + " пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ " + carBody);
 	}
-	
-	
+
 }
