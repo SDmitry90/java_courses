@@ -1,6 +1,6 @@
-package by.itacademy.java.dserbunou.home.practice5.Task1;
+package by.itacademy.java.dserbunou.home.practice5.task1;
 
-public class Car {
+public class Car implements Comparable<Car> {
 
 	private int year;
 	private String model;
@@ -30,5 +30,11 @@ public class Car {
 	public String toString() {
 		return String.format("{model=%s, year=%d}", model, year);
 	}
+
+    @Override
+    public int compareTo(Car o) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
 }

@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.home.practice5.Task1;
+package by.itacademy.java.dserbunou.home.practice5.task1;
 
 import java.util.Comparator;
 
