@@ -14,6 +14,7 @@ import java.util.List;
 public class Test1 {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
+
 		File dir = new File("C:\\Test1");
 		dir.mkdir();
 
@@ -24,18 +25,23 @@ public class Test1 {
 			File dir2 = new File("C:\\Test1", word.substring(0, 1));
 			dir2.mkdir();
 
-			// boolean created = dir.mkdir();
+			String letter = word.substring(0, 1);
+			String name = dir2.getName();
 
-			try (FileWriter fw = new FileWriter("words.txt", true);
-					BufferedWriter bw = new BufferedWriter(fw);
-					PrintWriter out = new PrintWriter(bw)) {
-				out.println(word.substring(0, 1));
-				out.println(word);
-			} catch (IOException e) {
+			while (letter.equals(name)) {
+
+				try (FileWriter fw = new FileWriter("C:\\Test1\\words.txt", true); // не понимаю как разбросать файл
+																					// words.txt по папкам
+						BufferedWriter bw = new BufferedWriter(fw);
+						PrintWriter out = new PrintWriter(bw)) {
+					out.println(word);
+					break;
+
+				} catch (IOException e) {
+				}
+
 			}
-
 		}
-
 	}
 
 	private static List<String> addText() throws IOException, FileNotFoundException {
