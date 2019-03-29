@@ -30,7 +30,7 @@ public class Test1 {
 
 			while (letter.equals(name)) {
 
-				try (FileWriter fw = new FileWriter("C:\\Test1\\words.txt", true); // не понимаю как разбросать файл
+				try (FileWriter fw = new FileWriter("C:\\Test1\\words.txt", true); // не получается как разбросать файл
 																					// words.txt по папкам
 						BufferedWriter bw = new BufferedWriter(fw);
 						PrintWriter out = new PrintWriter(bw)) {

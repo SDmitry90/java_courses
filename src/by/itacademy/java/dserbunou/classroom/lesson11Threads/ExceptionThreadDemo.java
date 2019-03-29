@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.classroom.lesson11Streams;
+package by.itacademy.java.dserbunou.classroom.lesson11Threads;
 
 public class ExceptionThreadDemo {
 

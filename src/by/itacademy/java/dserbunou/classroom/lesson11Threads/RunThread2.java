@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.classroom.lesson11Streams;
+package by.itacademy.java.dserbunou.classroom.lesson11Threads;
 
 public class RunThread2 {
     public static class HelloRunnable implements Runnable {
