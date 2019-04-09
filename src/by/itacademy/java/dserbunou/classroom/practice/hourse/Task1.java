@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-import by.itacademy.java.dserbunou.classroom.practice.Task2.Horse;
+//import by.itacademy.java.dserbunou.classroom.practice.Task2.Horse;
 
 public class Task1 {
 
