@@ -15,7 +15,7 @@ public class Test1 {
         NumberFormat rubFormat = NumberFormat.getCurrencyInstance(locale);
         System.out.println(rubFormat.format(10000));
 
-        Locale locale1 = new Locale("en", "GB");
+        Locale locale1 = new Locale("en");
         NumberFormat rubFormat1 = NumberFormat.getCurrencyInstance(locale1);
         System.out.println(rubFormat1.format(10000));
 
@@ -26,7 +26,7 @@ public class Test1 {
         System.out.println(num.doubleValue());
 
         
-        Locale locale3 = new Locale("ru", "RU");
+        Locale locale3 = new Locale("ru");
         Date currentDate = new Date();
         
         DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, locale3);

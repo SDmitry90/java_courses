@@ -24,7 +24,7 @@ public class RunThread3 {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        callMethodThenOthers(6); // try for all cases from 1 to 6 and investigate results
+        callMethodThenOthers(4); // try for all cases from 1 to 6 and investigate results
     }
 
     /**

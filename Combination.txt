@@ -327,6 +327,24 @@ XML->txt
 html->xml
 -исходным должен быть xml и его производные, на выходе все что угодно
 
+JSON
+______________________
+- для передачи данных база-клиентское приложение
+JSON format and JavaScript object ложаться 1:1
+Типы данных:
+примитивы
+-tring
+-number
+-bool
+-null
+структурные
+-object
+-massive
+
+In JAvaScript
+a={} - object
+b=[] - massive
+
 
 
 
