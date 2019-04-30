@@ -434,8 +434,64 @@ Data Access Object - DAO???
 ORDER by
 
 
+Логическое связывание таблиц
+_____________________________________________
+JOIN
+--select * from model 
+--join brand on (model.brand_id=brand.id);
 
+--select * from model m 
+--join brand b on (m.brand_id=b.id);
 
+--update model set brand_id=null where id =5;
+
+--select * from model m 
+--left join brand b on (m.brand_id=b.id);
+
+--select * from model m 
+--inner join brand b on (m.brand_id=b.id);
+
+--select * from model m 
+--right join brand b on (m.brand_id=b.id);
+
+--select * from model m 
+--full join brand b on (m.brand_id=b.id);
+
+Stored procedures (хранимые процедуры) - действие (пересчет)
+
+Триггеры - событие в базе (удаление, обновление)
+
+Транзакции
+commit
+abort
+нужно заворачивать свои запросы в транзакции для того, чтобы не пропали данные
+
+Репликации
+-одна БД пишет инфу в другую для распределения нагрузки (select в db1, db1->db2)
++держит нагрузки
+-время на репликации
+
+Скейлинг
+-масштабирование путем увеличения количества серверов (по горизонтали)
+-путем увеличения железа (по вертикали)
+
+Sharding
+-используется при проблемах с объемами
+-база разбивается на осколки
++большие объемы данных
+-
+
+JDBC
+-стандарт взаимодействия ява-приложения и бд
+Является частью Ява и лежит в пакете java.sql
+Позволяет:
+-соединение
+-запросы и получение состояния бд
+-обработка рез запросов
+
+Загрузка класса драйвера базы данных
+
+https://jdbc.postgresql.org/download.html
 
 
 
