@@ -493,5 +493,40 @@ JDBC
 
 https://jdbc.postgresql.org/download.html
 
+Основные понятия сетевой архитектуры
+OSI
+
+5-Presentation-SSL (шифрование), SSH (соединение с удаленной машиной), IMAP, FTP (передача файлов)
+4-Session-Sockets-открытое соединение по хосту и порту
+3-Network-TCP, UDP
+
+tracert google.com - путь до гугла
+
+Dev tools - прога в браузере, чтобы сомтреть что происходит F12 in Chrome
+
+https - protocol
+news.tut.by - hostname
+/news/social - pathname(path)
+после ? - query parameters   ключ = значение
+by - domen
+tut - domen 1 level
+news - domen 2 level
+
+HTTP methods
+-GET
+-PUT
+-POST-отсылка данных (созд объектов)
+
+У запроса могут быть
+Headers
+Body
+response status - для идентификации результата обработки запроса. Показывает, если смысл разгребать response
+
+1.Request VS 2.Response
+1.URL,method 
+2.status
+header,body - и там и там
+
+
 
 
