@@ -1,4 +1,4 @@
-package by.itacademy.java.dserbunou.home.practice7.db.entity;
+package by.itacademy.java.dserbunou.home.practice7.datalayer.entity;
 
 import java.util.Date;
 

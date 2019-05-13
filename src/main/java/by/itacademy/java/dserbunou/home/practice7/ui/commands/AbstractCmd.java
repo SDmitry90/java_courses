@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class AbstractCmd {
-    private static final BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
+    private static final BufferedReader consoleReader = new BufferedReader(
+            new InputStreamReader(System.in));
 
     private Class<? extends AbstractCmd>[] subCommands;
 
@@ -26,29 +27,33 @@ public abstract class AbstractCmd {
     /**
      * Contains code to be executed when user selected current command and also
      * returns the next command
-     * 
-     * @throws IllegalAccessException
-     * @throws InstantiationException
-     * @throws IOException 
      */
-    public AbstractCmd execute() throws InstantiationException, IllegalAccessException, IOException {
+    public AbstractCmd execute() {
         Class<? extends AbstractCmd> selectNextSubCommand = selectNextSubCommand();
-        return selectNextSubCommand.newInstance();
+        try {
+            return selectNextSubCommand.newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     protected Class<? extends AbstractCmd> selectNextSubCommand() {
         showSubCommands();
         Class<? extends AbstractCmd> selectedCmd = selectCommand();
         while (selectedCmd == null) {
-            System.out.println("Неверный ввод. Попробуйте еще раз...");
+            System.out.println("неверный ввод, попробуйте еще раз...");
             showSubCommands();
             selectedCmd = selectCommand();
         }
         return selectedCmd;
     }
 
-    protected String readInput() throws IOException {
-        return consoleReader.readLine();
+    protected String readInput() {
+        try {
+            return consoleReader.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private String getDescription(Class<? extends AbstractCmd> clazz) {
@@ -62,7 +67,8 @@ public abstract class AbstractCmd {
     private Command getMetadata(Class<? extends AbstractCmd> clazz) {
         Command annotation = clazz.getAnnotation(Command.class);
         if (annotation == null) {
-            throw new IllegalArgumentException("Class should be annotated with metadata. Class:" + clazz);
+            throw new IllegalArgumentException(
+                    "Class should be annotated with metadata. Class:" + clazz);
         }
         return annotation;
     }
@@ -71,22 +77,18 @@ public abstract class AbstractCmd {
         if (subCommands.length != 0) {
             System.out.println("-----------выберите действие-----------");
             for (Class<? extends AbstractCmd> cmdClass : subCommands) {
-                System.out.printf("%s - %s\n", getCommandName(cmdClass), getDescription(cmdClass));
+                System.out.printf("%s - %s\n", getCommandName(cmdClass),
+                        getDescription(cmdClass));
             }
         } else {
-            System.out.println("Нет подкоманд для показа. ");
+            System.out.println("нет подкоманд для показа");
             System.exit(1);
         }
     };
 
     private Class<? extends AbstractCmd> selectCommand() {
         String cmdName;
-        try {
-            cmdName = readInput();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        cmdName = readInput();
 
         for (Class<? extends AbstractCmd> cmd : subCommands) {
             if (getCommandName(cmd).equalsIgnoreCase(cmdName)) {
