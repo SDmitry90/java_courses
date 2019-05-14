@@ -536,6 +536,13 @@ _________________________________
 Servlet API - набор классов
 Servlet Container бывают: много, Apache Tomcat and jetty://
 
+HTTP testing tools (install)
+rest client - устанавливается с нета для проверки своих сервлетов 
+http://localhost:8081
+http://localhost:8081/path1
 
+Передаяа данных со страницы (формы)
+
+Передача служебной информации
 
 
