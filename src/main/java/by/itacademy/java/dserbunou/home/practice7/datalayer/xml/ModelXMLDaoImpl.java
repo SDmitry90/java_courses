@@ -14,11 +14,11 @@ public class ModelXMLDaoImpl extends AbstractXMLDao<ModelTable> implements IMode
         return null;
     }
 
-    @Override
+  /*  @Override
     public Model getBrand(Integer brand_id) {
         // TODO Auto-generated method stub
         return null;
-    }
+    }*/
 
     @Override
     public Model insert(Model entity) {

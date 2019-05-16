@@ -23,7 +23,7 @@ public class ModelDBDaoImpl extends AbstractDBDao implements IModelDao {
 	@Override
 	public Model insert(Model entity) {
 		try (Connection conn = createConnection();
-				PreparedStatement stmt = conn.prepareStatement("insert into brand (name) values (?)",
+				PreparedStatement stmt = conn.prepareStatement("insert into model (name) values (?)",
 						Statement.RETURN_GENERATED_KEYS);)
 
 		{
@@ -45,7 +45,7 @@ public class ModelDBDaoImpl extends AbstractDBDao implements IModelDao {
 	@Override
 	public void update(Model entity) {
 		try (Connection conn = createConnection();
-				PreparedStatement stmt = conn.prepareStatement("update brand set name=?, updated=? where id=?");) {
+				PreparedStatement stmt = conn.prepareStatement("update model set name=?, updated=? where id=?");) {
 			stmt.setString(1, entity.getName());
 			stmt.setObject(2, new Date(), Types.TIMESTAMP);
 			stmt.setInt(3, entity.getId());
@@ -61,7 +61,7 @@ public class ModelDBDaoImpl extends AbstractDBDao implements IModelDao {
 	public void delete(Integer id) {
 		try (Connection conn = createConnection(); Statement stmt = conn.createStatement();) {
 
-			int rowsAffected = stmt.executeUpdate(String.format("delete from brand where id=%s", id));
+			int rowsAffected = stmt.executeUpdate(String.format("delete from model where id=%s", id));
 
 			if (rowsAffected != 1)
 				throw new IllegalArgumentException("unexpected deleted rows count:" + rowsAffected);
@@ -75,18 +75,18 @@ public class ModelDBDaoImpl extends AbstractDBDao implements IModelDao {
 
 		try (Connection conn = createConnection();
 				Statement st = conn.createStatement();
-				ResultSet rs = st.executeQuery("select * from brand");) {
+				ResultSet rs = st.executeQuery("select * from model");) {
 
 			List<Model> list = new ArrayList<>();
 
 			while (rs.next()) {
-				Model brand = new Model();
+				Model model = new Model();
 
-				brand.setId(rs.getInt("id"));
-				brand.setName(rs.getString("name"));
-				brand.setCreated(rs.getDate("created"));
-				brand.setUpdated(rs.getDate("updated"));
-				list.add(brand);
+				model.setId(rs.getInt("id"));
+				model.setName(rs.getString("name"));
+				model.setCreated(rs.getDate("created"));
+				model.setUpdated(rs.getDate("updated"));
+				list.add(model);
 			}
 			return list;
 		} catch (SQLException e) {
@@ -98,16 +98,16 @@ public class ModelDBDaoImpl extends AbstractDBDao implements IModelDao {
 	public Model get(Integer id) {
 		try (Connection conn = createConnection();
 				Statement st = conn.createStatement();
-				ResultSet rs = st.executeQuery(String.format("select * from brand where id=%s", id));) {
+				ResultSet rs = st.executeQuery(String.format("select * from model where id=%s", id));) {
 
 			while (rs.next()) {
-				Model brand = new Model();
+				Model model = new Model();
 
-				brand.setId(rs.getInt("id"));
-				brand.setName(rs.getString("name"));
-				brand.setCreated(rs.getDate("created"));
-				brand.setUpdated(rs.getDate("updated"));
-				return brand;
+				model.setId(rs.getInt("id"));
+				model.setName(rs.getString("name"));
+				model.setCreated(rs.getDate("created"));
+				model.setUpdated(rs.getDate("updated"));
+				return model;
 			}
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
@@ -116,9 +116,8 @@ public class ModelDBDaoImpl extends AbstractDBDao implements IModelDao {
 		return null;
 	}
 
-	@Override
-	public Model getBrand(Integer brand_id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	/*
+	 * @Override public Model getModel(Integer brand_id) { // TODO Auto-generated
+	 * method stub return null; }
+	 */
 }
