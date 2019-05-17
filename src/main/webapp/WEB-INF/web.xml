@@ -24,6 +24,14 @@
 		<servlet-name>MyServlet3</servlet-name>
 		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.MyServlet3</servlet-class>
 	</servlet>
+	<servlet>
+
+		<servlet-name>BrandServlet</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.BrandServlet</servlet-class>
+	</servlet>
+
+
+
 
 	<!-- <servlet-mapping> <servlet-name>MyServlet</servlet-name> <url-pattern>/*</url-pattern> 
 		</servlet-mapping> -->
@@ -37,6 +45,12 @@
 	<servlet-mapping>
 		<servlet-name>MyServlet3</servlet-name>
 		<url-pattern>/path2</url-pattern>
+
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>BrandServlet</servlet-name>
+		<url-pattern>/servlet/brands</url-pattern>
 
 	</servlet-mapping>
 

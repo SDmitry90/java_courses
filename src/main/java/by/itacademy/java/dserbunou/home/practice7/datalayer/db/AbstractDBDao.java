@@ -7,8 +7,8 @@ import java.sql.SQLException;
 public abstract class AbstractDBDao {
 
     protected Connection createConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/ds-cars",
-                "postgres", "postgres");
+        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/ds_cars",
+                "postgres", "1");
 
     }
 
