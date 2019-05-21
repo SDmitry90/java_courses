@@ -6,52 +6,93 @@
 
 	<display-name>Simple web</display-name>
 
+	<context-param>
+		<param-name>databaseUrl</param-name>
+		<param-value>jdbc:postgresql://localhost:5432/ds_cars</param-value>
+	</context-param>
 
 	<servlet>
-
 		<servlet-name>MyServlet</servlet-name>
 		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.MyServlet</servlet-class>
+		<init-param>
+			<param-name>initParam</param-name>
+			<param-value>jdbc:postgresql://localhost:5432/ds_cars</param-value>
+		</init-param>
 	</servlet>
 
-	<servlet>
+	<servlet-mapping>
+		<servlet-name>MyServlet</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
 
+	<servlet>
 		<servlet-name>MyServlet2</servlet-name>
 		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.MyServlet2</servlet-class>
 	</servlet>
 
-	<servlet>
-
-		<servlet-name>MyServlet3</servlet-name>
-		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.MyServlet3</servlet-class>
-	</servlet>
-	<servlet>
-
-		<servlet-name>BrandServlet</servlet-name>
-		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.BrandServlet</servlet-class>
-	</servlet>
-
-
-
-
-	<!-- <servlet-mapping> <servlet-name>MyServlet</servlet-name> <url-pattern>/*</url-pattern> 
-		</servlet-mapping> -->
-
 	<servlet-mapping>
 		<servlet-name>MyServlet2</servlet-name>
 		<url-pattern>/path1</url-pattern>
-
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MyServlet3</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.MyServlet3</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>MyServlet3</servlet-name>
 		<url-pattern>/path2</url-pattern>
-
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BrandServlet</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.BrandServlet</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>BrandServlet</servlet-name>
 		<url-pattern>/servlet/brands</url-pattern>
-
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MyPageServlet</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.MyPageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyPageServlet</servlet-name>
+		<url-pattern>/myPage</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogOutServlet</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.LogOutServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogOutServlet</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>AuthorisationFilter</filter-name>
+		<filter-class>by.itacademy.java.dserbunou.classroom.filters.AuthorisationFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>AuthorisationFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 
 </web-app>

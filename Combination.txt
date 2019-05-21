@@ -569,10 +569,50 @@ http://localhost:8081/sample.jsp?title
 JSTL - java standart tag library
 
 
+_________________________________
+Начальные данные приложения
+web.xml
+<context-param> - в этих тегах указываются начальные данные
 
+Cookie
+-имена куки
+-значения
+-срока хранения
+-домен, его создавший
 
+куки хранятся на клиенте
 
+Сессии
+-хранится на сервере
+jsessionid - ключ, идентификатор сессии
 
+Статус коды.Фильтры.Аутентификация
+_________________________________
+100-500
+200 ОК("ХОРОШО")
+201 Created ("оздано")
+204 No Content
+301 Moved Permanently (перемещено навсегда)
+302 Moved Temporarily (перемещено временно)
+400 - что-то сломалось и нужно чинить, иначе пробовать бессмысленно
+400 Bad request
+401 Unauthrazed
+403 Forbidden
+404 Not Found
+405 Method Not Allowed (не поддерживается) - url есть, но метода в нем нет
+500 - Server error - предполагает retry (можно перезагрузить и все ок)
+500 Iternal Server Error
+502 Bad Gateway
+503 Service 
+504 Gateway timeout
+
+Фильтры 
+- почти как сервлет
+javax.servlet.Filter
+Методы
+-void init
+-void destroy
+-void DiFilter
 
 
 
