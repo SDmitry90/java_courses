@@ -8,7 +8,7 @@ public interface IModelDao {
 
 	Model get(Integer id);
 
-	//Model getBrand(Integer brand_id);
+	Model getBrandId(Integer brand_id);
 
 	Model insert(final Model entity);
 

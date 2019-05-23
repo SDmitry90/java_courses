@@ -1,5 +1,7 @@
 package by.itacademy.java.dserbunou.home.practice7.datalayer.xml;
 
+import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import by.itacademy.java.dserbunou.home.practice7.datalayer.IModelDao;
@@ -8,52 +10,70 @@ import by.itacademy.java.dserbunou.home.practice7.datalayer.xml.table.ModelTable
 
 public class ModelXMLDaoImpl extends AbstractXMLDao<ModelTable> implements IModelDao {
 
-    @Override
-    public Model get(Integer id) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+	@Override
+	public Model get(Integer id) {
+		throw new RuntimeException("not implemented");
+	}
 
-  /*  @Override
-    public Model getBrand(Integer brand_id) {
-        // TODO Auto-generated method stub
-        return null;
-    }*/
+	@Override
+	public Model getBrandId(Integer brand_id) {
+		throw new RuntimeException("not implemented");
+	}
 
-    @Override
-    public Model insert(Model entity) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+	@Override
+	public Model insert(Model entity) {
+		ModelTable table = read();
 
-    @Override
-    public void update(Model entity) {
-        // TODO Auto-generated method stub
+		Integer id = table.nextId();
 
-    }
+		entity.setId(id);
+		Date created = new Date();
+		entity.setCreated(created);
+		entity.setUpdated(created);
+		table.getModels().add(entity);
 
-    @Override
-    public void delete(Integer id) {
-        // TODO Auto-generated method stub
+		write(table);
 
-    }
+		return entity;
+	}
 
-    @Override
-    public List<Model> getAll() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+	@Override
+	public void update(Model entity) {
+		// TODO Auto-generated method stub
 
-    @Override
-    String getFileName() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+	}
 
-    @Override
-    Class<ModelTable> getTableClass() {
-        // TODO Auto-generated method stub
-        return null;
-    }
+	@Override
+	public void delete(Integer id) {
+		ModelTable table = read();
+
+		Iterator<Model> iterator = table.getModels().iterator();
+
+		while (iterator.hasNext()) {
+			Model model = iterator.next();
+			if (model.getId().equals(id)) {
+				iterator.remove();
+			}
+		}
+
+		write(table);
+
+	}
+
+	@Override
+	public List<Model> getAll() {
+		ModelTable table = read();
+		return table.getModels();
+	}
+
+	@Override
+	String getFileName() {
+		return "models-table.xml";
+	}
+
+	@Override
+	Class<ModelTable> getTableClass() {
+		return ModelTable.class;
+	}
 
 }

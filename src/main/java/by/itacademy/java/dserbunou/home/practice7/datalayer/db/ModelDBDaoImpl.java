@@ -116,8 +116,11 @@ public class ModelDBDaoImpl extends AbstractDBDao implements IModelDao {
 		return null;
 	}
 
-	/*
-	 * @Override public Model getModel(Integer brand_id) { // TODO Auto-generated
-	 * method stub return null; }
-	 */
+	@Override
+	public Model getBrandId(Integer brand_id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }
