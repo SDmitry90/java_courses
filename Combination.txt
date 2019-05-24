@@ -614,6 +614,8 @@ javax.servlet.Filter
 -void destroy
 -void DiFilter
 
+Basic Authentication
+base64 - coding
 
 
 

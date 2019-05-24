@@ -95,4 +95,44 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
+	<servlet>
+		<servlet-name>Resource</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.Resource</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Resource</servlet-name>
+		<url-pattern>/r1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Resource2</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.Resource2</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Resource2</servlet-name>
+		<url-pattern>/r2</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Resource3</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.Resource3</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Resource3</servlet-name>
+		<url-pattern>/r3</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Resource4</servlet-name>
+		<servlet-class>by.itacademy.java.dserbunou.classroom.servlet.Resource4</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Resource4</servlet-name>
+		<url-pattern>/r4</url-pattern>
+	</servlet-mapping>
+
 </web-app>
