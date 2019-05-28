@@ -618,8 +618,15 @@ Basic Authentication
 base64 - coding
 
 
+JS
+____________
+функциональный язык программирования
+77=='77' - true
+77==='77' - false
+always use ===
 
-
+NPM - Maven
+с помощью require осуществляется подгрузка модулей
 
 
 
